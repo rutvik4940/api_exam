@@ -23,12 +23,6 @@ class _ProductScreenState extends State<ProductScreen> {
     return Scaffold(
       appBar: AppBar(
         surfaceTintColor: Colors.white,
-       actions: [
-         IconButton(onPressed: () {
-          providerW!.setProductData(category: m1.category!, description: m1.description!, price:m1.description!);
-
-         }, icon:Icon( Icons.favorite))
-       ],
        centerTitle: true,
         title: const Text("Products",style: TextStyle(fontWeight: FontWeight.bold),),
       ),
@@ -82,7 +76,10 @@ class _ProductScreenState extends State<ProductScreen> {
               padding: const EdgeInsets.all(15.0),
               child: ElevatedButton(
                 style: const ButtonStyle(backgroundColor: WidgetStatePropertyAll(Colors.black)),
-                onPressed: () {},
+                onPressed: () {
+                  providerW!.setProductData(category:m1.category!, description: m1.description!, price: m1.price.toString());
+                  Navigator.pop(context);
+                },
                 child: const Text("Add to cart",style: TextStyle(fontSize: 20,color: Colors.white),),
               ),
             )

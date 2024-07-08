@@ -8,7 +8,7 @@ Map<String,WidgetBuilder>app_routs={
   "/":(context) => const SplashScreen(),
   "home":(context) => const HomeScreen(),
   "product":(context) => const ProductScreen(),
-  // "cart":(context) => const CartScreen()
+  "cart":(context) => const CartScreen()
 
 
 };

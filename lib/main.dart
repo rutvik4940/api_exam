@@ -10,9 +10,14 @@ void main()
         providers: [
           ChangeNotifierProvider.value(value: HomeProvider()),
         ],
-        child: MaterialApp(
-          debugShowCheckedModeBanner: false,
-          routes: app_routs,
+        child: Consumer<HomeProvider>(
+          builder: (context, value, child) {
+            value.getProductData();
+           return MaterialApp(
+              debugShowCheckedModeBanner: false,
+              routes: app_routs,
+            );
+          }
         ),
       )
   );

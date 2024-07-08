@@ -71,7 +71,7 @@ class HomeProvider with ChangeNotifier
     s = list1[2]!;
   }
 
-  Future<void> delet(int index) async {
+  Future<void> delete(int index) async {
     getProductData();
     h!.removeAt(index);
     s!.removeAt(index);
@@ -79,5 +79,4 @@ class HomeProvider with ChangeNotifier
     await SharedHelper.helper.setData(h!, r!, s!);
     getProductData();
   }
-
 }

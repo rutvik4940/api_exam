@@ -41,6 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Navigator.pushNamed(context, "cart");
             },
             icon: Icon(Icons.shopping_cart),
+
           ),
         ],
         // backgroundColor: Colors.black,
